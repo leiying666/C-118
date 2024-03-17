@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<string.h>
+#include<errno.h>
+#include<stdlib.h>
+#include<math.h>
+#include<stdio.h>
+#include<assert.h>
+
+int my_strlen(const char* str)
+{
+	int c = 0;
+	assert(str != NULL);
+	while (*str)
+	{
+		c++;
+		str++;
+	}
+	return c;
+}
+
+int main()
+{
+	char a[] = "abcdef";
+	int tmp = my_strlen(a);
+	printf("%d\n", tmp);
+	return 0;
+ }
